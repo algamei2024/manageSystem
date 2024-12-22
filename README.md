@@ -3,4 +3,4 @@ use html and css and ajax as api
 it is allow for merge in any system
 
 <h1>About me</h1>
-you can visite my web sit in this link <a href="https://ibdaa.kesug.com/">My Websit</a>
+you can visite my web sit in this link <a href="https://ibdaa.kesug.com/" target="_blank">My Websit</a>
