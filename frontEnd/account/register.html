@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>تسجيل دخول</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <ul>
+                <li>نظام إدراة المستخدمين</li>
+            </ul>
+        </div>
+    </header>
+    <div class="form-container">
+        <p class="title">إنشاء حساب</p>
+        <form class="form">
+            <div class="input-group">
+                <label for="username">الاسم</label>
+                <input placeholder="إدخل اسمك" id="username" name="use_name" type="text" />
+            </div>
+            <div class="input-group">
+                <label for="email">البريد الالكتروني</label>
+                <input placeholder="إدخل بريدك الالكتروني" id="email" name="use_email" type="email" />
+                <label for="password">كلمة السر</label>
+                <input placeholder="إدخل كلمة السر" id="password" name="use_password" type="password" />
+                <label for="Cpassword">تاكيد كلمة السر</label>
+                <input placeholder="تاكيد كلمة السر" type="password" id="Cpassword" name="use_Cpassword" />
+            </div>
+            <button style="margin-top:6%;" class="sign">إنشاء</button>
+        </form>
+    </div>
+    <script src="../library/jquery-2.1.0.min.js"></script>
+    <script src="./action.js"></script>
+</body>
+
+</html>
+
+<div class="overlay" id="overlay">
+    <div class="loader"></div>
+    <p>جاري إنشاء الحساب...</p>
+</div>

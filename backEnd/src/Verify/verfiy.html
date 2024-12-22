@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            direction: rtl;
+            font-family: Arial, sans-serif;
+        }
+
+        .title {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .container,
+        footer,
+        .title {
+            background-color: rgb(221 220 217 / 71%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container>div {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .container,
+        button {
+            width: 90%;
+            margin: auto;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            background-color: goldenrod;
+            border-radius: 9px;
+            color: white;
+            cursor: pointer;
+            font-weight: bolder;
+            border: none;
+            font-size: 20px;
+        }
+
+        .title {
+            background-color: aliceblue;
+        }
+
+        .title * {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #010017da;
+            margin-top: 0 !important;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer>div {
+            padding: 10px;
+        }
+
+        footer .footer {
+            background-color: #010017;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer>div>p {
+            font-weight: bolder;
+            color: white;
+        }
+
+        footer>.copy h1 {
+            margin: 0;
+            padding: 10px;
+            color: wheat;
+            text-align: center;
+        }
+    </style>
+    <title>تحقق من البريد</title>
+</head>
+
+<body>
+    <div class="title">
+        <h1>نظام إدارة المستخدمين</h1>
+    </div>
+    <div class="container">
+        <div>
+            <h1>مرحبا!</h1>
+        </div>
+        <div>
+            <p>
+                لتاكيد حسابك يرجي النقر على الزر اسفل
+            </p>
+            <form action="http://localhost/ManageSystem/backEnd/src/api/users/verifiy.php?token={variable}" method="post"  target="_blank">
+                <button type="submit">
+                    زر التحقق من بريدك الالكتروني
+                </button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <p>مع اطيب التحايا</p>
+        </div>
+        <div class="copy">
+            <h1>نظام إدارة السمتخدمين</h1>
+        </div>
+    </footer>
+</body>
+</html>
