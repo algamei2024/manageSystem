@@ -46,7 +46,19 @@ function success($new_token){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>التحقق من البريد</title>
         <script>
-            window.onload = function(){ 
+            function setSecureCookie(name,value,days){
+                let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + 
+                      "; path=/" + 
+                      "; secure; HttpOnly; SameSite=Strict";
+            }
+            window.onload = function(){
+                 setSecureCookie("lsign",<?php echo json_encode($new_token)?>,6);
                 sessionStorage.setItem("lsign",<?php echo json_encode($new_token)?>);
             }
         </script>
@@ -74,7 +86,7 @@ function noemail(){
     <title>التحقق من البريد</title>
     <script>
         if(sessionStorage.getItem("lsign")){
-           window.location.href = 'https://www.google.com';
+           window.location.href = 'file:///C:/xampp/htdocs/ManageSystem/frontEnd/src/index.html';
         }
     </script>
 </head>

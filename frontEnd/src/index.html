@@ -6,159 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../output.css" rel="stylesheet">
     <title>manage system</title>
+    <style>
+        @font-face{
+            font-family: 'Cairo';
+            src: url('../public/font/Cairo-Black.ttf') format('truetype');
+        }
+        body{
+            font-family: 'Cairo' ,sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <header class="bg-black">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only text-white">محمد</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="">
-                </a>
-            </div>
-            <div class="flex lg:hidden">
-                <button type="button"
-                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                    <span class="sr-only text-white">Open main menu</span>
-                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
-            </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-                <div class="relative">
-                    <button type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 text-white"
-                        aria-expanded="false">
-                        Product
-                        <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
-                            aria-hidden="true" data-slot="icon">
-                            <path fill-rule="evenodd"
-                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <div
-                        class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                        <div class="p-4">
-                            <div
-                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                                <div
-                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                    <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
-                                        data-slot="icon">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
-                                    </svg>
-                                </div>
-                                <div class="flex-auto">
-                                    <a href="#" class="block font-semibold text-gray-900">
-                                        Analytics
-                                        <span class="absolute inset-0"></span>
-                                    </a>
-                                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="#" class="text-sm/6 font-semibold text-white">Features</a>
-                <a href="#" class="text-sm/6 font-semibold text-white">Marketplace</a>
-                <a href="#" class="text-sm/6 font-semibold text-white">Company</a>
-            </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm/6 font-semibold text-white">Log in <span
-                        aria-hidden="true">&rarr;</span></a>
-            </div>
-        </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-            <!-- Background backdrop, show/hide based on slide-over state. -->
-            <div class="fixed inset-0 z-10"></div>
-            <div
-                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                <div class="flex items-center justify-between">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Your Company</span>
-                        <img class="h-8 w-auto"
-                            src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-                    </a>
-                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                        <span class="sr-only">Close menu</span>
-                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="mt-6 flow-root">
-                    <div class="-my-6 divide-y divide-gray-500/10">
-                        <div class="space-y-2 py-6">
-                            <div class="-mx-3">
-                                <button type="button"
-                                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                    aria-controls="disclosure-1" aria-expanded="false">
-                                    Product
-                                    <!--
-                      Expand/collapse icon, toggle classes based on menu open state.
-    
-                      Open: "rotate-180", Closed: ""
-                    -->
-                                    <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true" data-slot="icon">
-                                        <path fill-rule="evenodd"
-                                            d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </button>
-                                <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                                <div class="mt-2 space-y-2" id="disclosure-1">
-                                    <a href="#"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Analytics</a>
-                                    <a href="#"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Engagement</a>
-                                    <a href="#"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Security</a>
-                                    <a href="#"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Integrations</a>
-                                    <a href="#"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Automations</a>
-                                    <a href="#"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Watch
-                                        demo</a>
-                                    <a href="#"
-                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Contact
-                                        sales</a>
-                                </div>
-                            </div>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-                        </div>
-                        <div class="py-6">
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
-                                in</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body dir="rtl">
+    <header class="bg-black flex p-5 gap-5">
+        <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M15.5 7.5C15.5 9.433 13.933 11 12 11C10.067 11 8.5 9.433 8.5 7.5C8.5 5.567 10.067 4 12 4C13.933 4 15.5 5.567 15.5 7.5Z"
+                fill="#fff" />
+            <path
+                d="M18 16.5C18 18.433 15.3137 20 12 20C8.68629 20 6 18.433 6 16.5C6 14.567 8.68629 13 12 13C15.3137 13 18 14.567 18 16.5Z"
+                fill="#fff" />
+            <path
+                d="M7.12205 5C7.29951 5 7.47276 5.01741 7.64005 5.05056C7.23249 5.77446 7 6.61008 7 7.5C7 8.36825 7.22131 9.18482 7.61059 9.89636C7.45245 9.92583 7.28912 9.94126 7.12205 9.94126C5.70763 9.94126 4.56102 8.83512 4.56102 7.47063C4.56102 6.10614 5.70763 5 7.12205 5Z"
+                fill="#fff" />
+            <path
+                d="M5.44734 18.986C4.87942 18.3071 4.5 17.474 4.5 16.5C4.5 15.5558 4.85657 14.744 5.39578 14.0767C3.4911 14.2245 2 15.2662 2 16.5294C2 17.8044 3.5173 18.8538 5.44734 18.986Z"
+                fill="#fff" />
+            <path
+                d="M16.9999 7.5C16.9999 8.36825 16.7786 9.18482 16.3893 9.89636C16.5475 9.92583 16.7108 9.94126 16.8779 9.94126C18.2923 9.94126 19.4389 8.83512 19.4389 7.47063C19.4389 6.10614 18.2923 5 16.8779 5C16.7004 5 16.5272 5.01741 16.3599 5.05056C16.7674 5.77446 16.9999 6.61008 16.9999 7.5Z"
+                fill="#fff" />
+            <path
+                d="M18.5526 18.986C20.4826 18.8538 21.9999 17.8044 21.9999 16.5294C21.9999 15.2662 20.5088 14.2245 18.6041 14.0767C19.1433 14.744 19.4999 15.5558 19.4999 16.5C19.4999 17.474 19.1205 18.3071 18.5526 18.986Z"
+                fill="#fff" />
+        </svg>
+        <ul class="flex items-center gap-10">
+            <li class="text-white cursor-pointer hover:text-amber-500">الرئيسية</li>
+            <li class="text-white cursor-pointer hover:text-amber-500">المستخدمين</li>
+        </ul>
     </header>
-
-    <div class="flex flex-col">
-        <h1>mohammed</h1>
-    </div>
+    <script src="../public/jquery-2.1.0.min.js"></script>
+    <script src="./functions.js"></script>
+    <script src="./action.js"></script>
 </body>
 
 </html>
